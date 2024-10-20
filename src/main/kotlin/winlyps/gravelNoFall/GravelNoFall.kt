@@ -5,7 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin
 class GravelNoFall : JavaPlugin() {
 
     override fun onEnable() {
-        // Plugin startup logic
+        // Register the event listener
+        server.pluginManager.registerEvents(GravelListener(this), this)
     }
 
     override fun onDisable() {
